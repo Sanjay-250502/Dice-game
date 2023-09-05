@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dice Game</title>
+</head>
+<body onload="handleStart()">
+    <div class="main">
+        <div class="header">
+            <b>Let's Play Dice</b>
+            <h1 id="player-move">Player-1 To Play</h1>
+        </div>
+        <div class="game">
+            <div class="player">
+                <h3>Player-1</h3>
+                <h1 id="player1-score">0</h1>
+                <button id="player1-button" onclick="handleDiceRoll('Player-1')">Roll Now</button>
+            </div>
+            <div class="dice">
+                <img src="images/1.jpg" alt="dice" id="dice" />
+            </div>
+            <div class="player">
+                <h3>Player-2</h3>
+                <h1 id="player2-score">0</h1>
+                <button id="player2-button" onclick="handleDiceRoll('Player-2')">Roll Now</button>
+            </div>
+        </div>
+        <div class="reset">
+            <button onclick="handleReset()">RESET</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: palevioletred; */
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    padding-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header b {
+    font-size: 14px;
+    color: green;
+    padding: 10px;
+}
+
+.header h1 {
+    letter-spacing: 1px;
+}
+
+.game {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.player h3 {
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+.player button {
+    background-color: green;
+    color: white;
+    outline: none;
+    width: 85px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.player button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.dice {
+    font-size: 40px;
+    color: green;
+}
+
+.dice img {
+    width: 120px;
+}
+
+.rotate {
+    animation: diceRoll 1s linear;
+}
+
+@keyframes diceRoll {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(90deg);
+    }
+
+    50% {
+        transform: rotateZ(180deg);
+    }
+
+    75% {
+        transform: rotateZ(270deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.reset {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset button {
+    background-color: rgb(236, 168, 168);
+    color: black;
+    width: 85px;
+    height: 30px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
